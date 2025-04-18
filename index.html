@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Regular Expression</title>
+  <link href="./style/output.css" rel="stylesheet" />
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-green-100 via-white to-green-50 min-h-screen flex items-center justify-center">
+  <div class="w-full max-w-md p-8 bg-white rounded-2xl shadow-lg">
+    <h2 class="text-2xl font-semibold text-center text-green-600 mb-6">Form Validasi</h2>
+
+    <form class="space-y-5">
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+        <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" placeholder="contoh@email.com">
+        <p id="emailError" class="text-sm text-red-500 mt-1 hidden">Email tidak valid</p>
+      </div>
+
+      <!-- Username -->
+      <div>
+        <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
+        <input type="text" id="username" name="username" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" placeholder="Masukkan username">
+        <p id="usernameError" class="text-sm text-red-500 mt-1 hidden">Username minimal 8 karakter tanpa spasi</p>
+      </div>
+
+      <!-- Nama Lengkap -->
+      <div>
+        <label for="nama" class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
+        <input type="text" id="nama" name="nama" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" placeholder="Masukkan nama lengkap">
+        <p id="namaError" class="text-sm text-red-500 mt-1 hidden">Nama harus dimulai huruf kapital</p>
+      </div>
+
+      <!-- Nomor Telepon -->
+      <div>
+        <label for="telepon" class="block text-sm font-medium text-gray-700 mb-1">Nomor Telepon</label>
+        <input type="text" id="telepon" name="telepon" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" placeholder="08xxxxxxxxxx">
+        <p id="teleponError" class="text-sm text-red-500 mt-1 hidden">Nomor telepon harus minimal 11 digit angka</p>
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+        <input type="password" id="password" name="password" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" placeholder="********">
+        <p id="passwordError" class="text-sm text-red-500 mt-1 hidden">Password terlalu lemah</p>
+      </div>
+      <label class="flex items-center gap-2 mt-2">
+        <input type="checkbox" id="showPassword" />
+        <span class="text-sm text-gray-700">Tampilkan Password</span>
+      </label>
+      
+      <button type="submit" class="w-full bg-green-500 text-white font-semibold py-2 rounded-lg hover:bg-green-600 transition duration-300">
+        Submit
+      </button>
+    </form>
+  </div>
+</body>
+
+</html>
